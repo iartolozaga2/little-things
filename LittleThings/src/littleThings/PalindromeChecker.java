@@ -8,7 +8,7 @@ public class PalindromeChecker {
 		Scanner in = new Scanner(System.in);
 		boolean done = false;
 		while (!done) {
-			System.out.println("Please write the word you want to check (dont capitalize):");
+			System.out.println("Please write the word you want to check:");
 			String word = in.nextLine();
 			if (isPalindrome(word)) {
 				System.out.println("Thats a palindrome!");
@@ -21,6 +21,9 @@ public class PalindromeChecker {
 	
 	public static boolean isPalindrome(String string) {
 		char[] charArray = string.toCharArray();
+		for (int k = 0; k < charArray.length; k++) {
+			charArray[k] = Character.toLowerCase(charArray[k]);
+		}
 		boolean result = true;
 		if (charArray.length % 2 == 0) {
 			for (int i = 0; i < charArray.length; i++) {
