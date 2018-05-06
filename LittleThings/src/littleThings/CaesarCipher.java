@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class CaesarCipher {
 	
+	//TODO: Make the scanners work correctly after first use.
+	
 	public static void main (String[] args) {
 		Scanner in = new Scanner(System.in);
 		boolean done = false;
