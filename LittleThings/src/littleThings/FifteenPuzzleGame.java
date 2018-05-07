@@ -45,7 +45,7 @@ public class FifteenPuzzleGame {
 	}
 
 	//Converts a given integer arrat to a List<Integer>
-	private static List<Integer> asList(int[] board) {
+	public static List<Integer> asList(int[] board) {
 		List<Integer> list = new ArrayList<>();
 		for (int i = 0; i < board.length; i++) {
 			list.add(board[i]);
