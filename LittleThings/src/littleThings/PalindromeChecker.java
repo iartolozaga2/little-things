@@ -23,28 +23,22 @@ public class PalindromeChecker {
 	}
 	
 	public static boolean isPalindrome(String string) {
-		//Creates a character array out of the desired string
-		char[] charArray = string.toCharArray();								
+		char[] charArray = string.toCharArray();
+		char[] inverse = new char[charArray.length];
 		for (int k = 0; k < charArray.length; k++) {
 			//Makes all the chars lower case (makes comparison easier)
 			charArray[k] = Character.toLowerCase(charArray[k]);					
 		}
-		boolean result = true;
-		if (charArray.length % 2 == 0) {
-			//Compares word letter by letter for even-length words
-			for (int i = 0; i < charArray.length; i++) {
-				if (charArray[i] != charArray[charArray.length - i - 1]) {		
-					result = false;
-				}
-			}
-		} else {
-			//Compares word letter by letter for odd-length words
-			for (int j = 0; j < charArray.length - 1; j++) {
-				if (charArray[j] != charArray[charArray.length - j - 1]) {	
-					result = false;
-				}
+		//Fills in a new array inversely to get the inverted version of the word
+		for (int i = 0; i < charArray.length; i++) {
+			inverse[i] = charArray[charArray.length - 1 - i];
+		}
+		//Checks whether the word is still the same even when it is backwards
+		for (int j = 0; j < charArray.length; j++) {
+			if (charArray[j] != inverse[j]) {
+				return false;
 			}
 		}
-		return result;
+		return true;
 	}
 }
