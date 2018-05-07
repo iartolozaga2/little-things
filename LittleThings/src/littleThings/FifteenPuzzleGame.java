@@ -21,10 +21,12 @@ public class FifteenPuzzleGame {
 			visualize(board);
 			System.out.println("\n\nWhat number do you want to move?");
 			int move = in.nextInt();
+			//Checks if the selected tile is a valid one
 			if (move > 15 || move < 1) {
 				System.out.println("That number does not exist!");
 				continue;
 			}
+			//Moves a valid tile to the empty one
 			if (validMove(board, asList(board).indexOf(move), asList(board).indexOf(0))) {
 				int iZero = asList(board).indexOf(0);
 				board[asList(board).indexOf(move)] = 0;
@@ -42,6 +44,7 @@ public class FifteenPuzzleGame {
 		}
 	}
 
+	//Converts a given integer arrat to a List<Integer>
 	private static List<Integer> asList(int[] board) {
 		List<Integer> list = new ArrayList<>();
 		for (int i = 0; i < board.length; i++) {
@@ -105,6 +108,7 @@ public class FifteenPuzzleGame {
 		return true;
 	}
 
+	//Prints a visualization of the board to the console
 	public static void visualize(int[] board) {
 		for (int i = 0; i < board.length; i++) {
 			if (i % 4 == 0) {
