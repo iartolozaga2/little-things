@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class CaesarCipher {
 	
-	//TODO: Make the scanners work correctly after first use.
-	
 	public static void main (String[] args) {
 		Scanner in = new Scanner(System.in);
 		boolean done = false;
 		while (!done) {
-			System.out.println("Write the message you want to encode:");
-			String message = in.nextLine();
 			System.out.println("Enter the number of shifts you want for your encoding:");
 			int shift = in.nextInt();
+			in.nextLine();
+			System.out.println("Write the message you want to encode:");
+			String message = in.nextLine();			
 			System.out.println("Your encoded message:\n" + caesarEncode(message,shift));
 			System.out.println("Your decoded message:\n" + caesarDecode(caesarEncode(message,shift),shift));
 			
