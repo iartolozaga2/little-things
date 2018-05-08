@@ -7,6 +7,7 @@ import java.util.Iterator;
 public class FifteenPuzzleGameSolver {
 
 	// This class depends on the FifteenPuzzleGame class
+	// http://rosettacode.org/wiki/15_puzzle_solver
 
 	public static void main(String[] args) {
 		int[] board = FifteenPuzzleGame.setup();

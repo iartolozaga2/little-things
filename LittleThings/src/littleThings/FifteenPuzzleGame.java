@@ -1,11 +1,14 @@
 package littleThings;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+
+// http://rosettacode.org/wiki/15_Puzzle_Game
 
 public class FifteenPuzzleGame {
 

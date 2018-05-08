@@ -16,6 +16,8 @@ public class HundredDoors {
 		Answer the question:   what state are the doors in after the last pass?   Which are open, which are closed?
 	 */
 	
+	// http://rosettacode.org/wiki/100_doors
+	
 	public static void main (String[] args) {
 		int[] doors = new int[100];
 		for (int i : doors) {
