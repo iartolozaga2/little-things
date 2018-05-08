@@ -56,5 +56,9 @@ public class TwentyFourGame {
 		return false;
 	}
 	
+	public static int parseOperation(char first, char sign, char second) {
+		return 0; //TODO
+	}
+	
 	
 }
