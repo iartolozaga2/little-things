@@ -2,6 +2,8 @@ package littleThings;
 
 public class NinetyNineBeers {
 	
+	// http://rosettacode.org/wiki/99_Bottles_of_Beer
+	
 	public static void main(String[] args) {
 		int beerNum = 99;
 		//Simple counter
